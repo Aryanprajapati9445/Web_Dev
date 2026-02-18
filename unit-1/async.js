@@ -19,17 +19,17 @@
 
 
 
-// function bakeCake(mycallBack){
-//     console.log("i am baking the cake");
-//     setTimeout(()=>{
-//         console.log("the cake is ready");
-//         mycallBack();
-//     }, 3000);
+function bakeCake(mycallBack){
+    console.log("i am baking the cake");
+    setTimeout(()=>{
+        console.log("the cake is ready");
+        mycallBack();
+    }, 3000);
 
-// }
-// bakeCake(()=>{
-//     console.log("now i can eat the cake");
-// });
+}
+bakeCake(()=>{
+    console.log("now i can eat the cake");
+});
 
 
 // function delay(ms = 1000) {
@@ -52,19 +52,38 @@
 // write a program in js that you go kashmir using given patrol then i go or not
 
 
-function goToKashmir(patrol){
-    return new Promise((resolve, reject)=>{
-        if(patrol >= 100){
-            resolve("You can go to Kashmir");
-        }else{
-            reject("You cannot go to Kashmir");
-        }
-    });
+// function goToKashmir(patrol){
+//     return new Promise((resolve, reject)=>{
+//         if(patrol >= 100){
+//             resolve("You can go to Kashmir");
+//         }else{
+//             reject("You cannot go to Kashmir");
+//         }
+//     });
+// }
+
+// goToKashmir(10).then((message)=>{
+//     console.log(message);
+// }).catch((error)=>{
+//     console.log(error);
+// });
+
+for( var i=0;i<2;i++){
+    setTimeout(function(){
+        console.log("setTimeout called with i =", i);
+        func1();
+    },1000);
+    func2();
+}
+function func2(){
+    console.log("in function 2");
+}
+function func1(){
+    console.log("in function 1");
 }
 
-goToKashmir(10).then((message)=>{
-    console.log(message);
-}).catch((error)=>{
-    console.log(error);
-});
-
+async function party(){
+    console.log("Start baking the cake");
+    
+}
+// write a program bakecake with promise 
