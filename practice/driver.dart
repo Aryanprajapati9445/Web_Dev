@@ -283,7 +283,8 @@ fetchData("Hello") → Completes with "Hello"
 
 Future<String> fetchData(String message) {
   // STUDENT CODE STARTS HERE
-  return Future.delayed(Duration(seconds: 2), () => message);
+  return Future.delayed(Duration(minutes: 2), () => message);
+
   // STUDENT CODE ENDS HERE
 }
 
@@ -306,10 +307,10 @@ await consumeFuture(fetchData("Done"))
 → Prints "Done"
 */
 
-Future<void> consumeFuture(Future<String> future) async {
+Future<String> consumeFuture(Future<String> future) async {
   // STUDENT CODE STARTS HERE
   String result = await future;
-  print(result);
+  return result;
   // STUDENT CODE ENDS HERE
 }
 
